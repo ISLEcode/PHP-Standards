@@ -16,3 +16,5 @@ This is made available primarily for our staff and partners. However we know tha
 in our industry today. Discussions on such topics is open. We are open to positive criticism, and under valid arguments, could
 adjust over time. Note however that animating discussions will be on a best effort basis.
 
+
+[php-fig]: https://github.com/php-fig/fig-standards
