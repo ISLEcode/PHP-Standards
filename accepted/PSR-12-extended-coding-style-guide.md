@@ -50,21 +50,14 @@ use function Vendor\Package\{functionA, functionB, functionC};
 
 use const Vendor\Package\{ConstantA, ConstantB, ConstantC};
 
-class Foo extends Bar implements FooInterface
-{
-    public function sampleFunction(int $a, int $b = null): array
-    {
-        if ($a === $b) {
-            bar();
-        } elseif ($a > $b) {
-            $foo->bar($arg1);
-        } else {
-            BazClass::bar($arg2, $arg3);
-        }
+class Foo extends Bar implements FooInterface {
+    public function sampleFunction (int $a, int $b = null): array {
+        if ($a === $b) bar ();
+        elseif ($a > $b) $foo->bar ($arg1);
+        else BazClass::bar ($arg2, $arg3);
     }
 
-    final public static function bar()
-    {
+    final public static function bar () {
         // method body
     }
 }
@@ -81,43 +74,43 @@ each word is capitalized including the very first letter.
 
 ### 2.2 Files
 
-All PHP files MUST use the Unix LF (linefeed) line ending only.
+- [x] All PHP files MUST use the Unix LF (linefeed) line ending only.
 
-All PHP files MUST end with a non-blank line, terminated with a single LF.
+- [x] All PHP files MUST end with a non-blank line, terminated with a single LF.
 
-The closing `?>` tag MUST be omitted from files containing only PHP.
+- [x] The closing `?>` tag MUST be omitted from files containing only PHP.
 
 ### 2.3 Lines
 
-There MUST NOT be a hard limit on line length.
+- [x] There MUST NOT be a hard limit on line length.
 
-The soft limit on line length MUST be 120 characters.
+- [x] The soft limit on line length MUST be 130 characters.
 
-Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD
-be split into multiple subsequent lines of no more than 80 characters each.
+- [x] Lines SHOULD NOT be longer than 130 characters; lines longer than that SHOULD be split into multiple subsequent lines of no
+more than 130 characters each.
 
-There MUST NOT be trailing whitespace at the end of lines.
+- [x] There MUST NOT be trailing whitespace at the end of lines.
 
-Blank lines MAY be added to improve readability and to indicate related
+- [x] Blank lines MAY be added to improve readability and to indicate related
 blocks of code except where explicitly forbidden.
 
-There MUST NOT be more than one statement per line.
+**TODO** <del>There MUST NOT be more than one statement per line.</del>
 
 ### 2.4 Indenting
 
-Code MUST use an indent of 4 spaces for each indent level, and MUST NOT use
-tabs for indenting.
+- [x] Code MUST use an indent of 4 spaces for each indent level, and MUST NOT use tabs for indenting.
 
 ### 2.5 Keywords and Types
 
-All PHP reserved keywords and types [[1]][keywords][[2]][types] MUST be in lower case.
+- [x] All PHP reserved keywords and types [[1]][keywords][[2]][types] MUST be in lower case.
 
-Any new types and keywords added to future PHP versions MUST be in lower case.
+- [x] Any new types and keywords added to future PHP versions MUST be in lower case.
 
-Short form of type keywords MUST be used i.e. `bool` instead of `boolean`,
-`int` instead of `integer` etc.
+- [x] Short form of type keywords MUST be used i.e. `bool` instead of `boolean`, `int` instead of `integer` etc.
 
 ## 3. Declare Statements, Namespace, and Import Statements
+
+**TODO** This needs to be reworked
 
 The header of a PHP file may consist of a number of different blocks. If present,
 each of the blocks below MUST be separated by a single blank line, and MUST NOT contain
@@ -138,21 +131,18 @@ be used. If so, they MUST be present at the top of the file, even if the
 remainder of the code consists of a closing PHP tag and then a mixture of HTML and
 PHP.
 
-When the opening `<?php` tag is on the first line of the file, it MUST be on its
+<del>When the opening `<?php` tag is on the first line of the file, it MUST be on its
 own line with no other statements unless it is a file containing markup outside of PHP
-opening and closing tags.
+opening and closing tags.</del>
 
-Import statements MUST never begin with a leading backslash as they
-must always be fully qualified.
+- [x] Import statements MUST never begin with a leading backslash as they must always be fully qualified.
 
 The following example illustrates a complete list of all blocks:
 
 ~~~php
 <?php
 
-/**
- * This file contains an example of coding styles.
- */
+//! This file contains an example of coding styles.
 
 declare(strict_types=1);
 
@@ -168,15 +158,15 @@ use function Another\Vendor\functionD;
 use const Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
 use const Another\Vendor\CONSTANT_D;
 
-/**
- * FooBar is an example class.
- */
-class FooBar
-{
+// FooBar is an example class.
+
+class FooBar {
     // ... additional PHP code ...
 }
 
 ~~~
+
+**TODO** Agreed on the principle; probably simply change `MUST` to `SHOULD`.
 
 Compound namespaces with a depth of more than two MUST NOT be used. Therefore the
 following is the maximum compounding depth allowed:
@@ -203,9 +193,8 @@ use Vendor\Package\SomeNamespace\{
 };
 ~~~
 
-When wishing to declare strict types in files containing markup outside PHP
-opening and closing tags, the declaration MUST be on the first line of the file
-and include an opening PHP tag, the strict types declaration and closing tag.
+- [x] When wishing to declare strict types in files containing markup outside PHP opening and closing tags, the declaration MUST
+be on the first line of the file and include an opening PHP tag, the strict types declaration and closing tag.
 
 For example:
 ~~~php
@@ -219,11 +208,10 @@ For example:
 </html>
 ~~~
 
-Declare statements MUST contain no spaces and MUST be exactly `declare(strict_types=1)`
+- [x] Declare statements MUST contain no spaces and MUST be exactly `declare(strict_types=1)`
 (with an optional semi-colon terminator).
 
-Block declare statements are allowed and MUST be formatted as below. Note position of
-braces and spacing:
+- [x] Block declare statements are allowed and MUST be formatted as below. Note position of braces and spacing:
 ~~~php
 declare(ticks=1) {
     // some code
@@ -234,11 +222,11 @@ declare(ticks=1) {
 
 The term "class" refers to all classes, interfaces, and traits.
 
-Any closing brace MUST NOT be followed by any comment or statement on the
-same line.
+**TODO** Automation should not dictate style
+<del>Any closing brace MUST NOT be followed by any comment or statement on the same line.</del>
 
-When instantiating a new class, parentheses MUST always be present even when
-there are no arguments passed to the constructor.
+- [x] When instantiating a new class, parentheses MUST always be present even when there are no arguments passed to the
+constructor.
 
 ~~~php
 new Foo();
@@ -246,17 +234,14 @@ new Foo();
 
 ### 4.1 Extends and Implements
 
-The `extends` and `implements` keywords MUST be declared on the same line as
-the class name.
+- [x] The `extends` and `implements` keywords MUST be declared on the same line as the class name.
 
-The opening brace for the class MUST go on its own line; the closing brace
-for the class MUST go on the next line after the body.
+<del>The opening brace for the class MUST go on its own line; the closing brace
+for the class MUST go on the next line after the body.</del>
 
-Opening braces MUST be on their own line and MUST NOT be preceded or followed
-by a blank line.
+<del>Opening braces MUST be on their own line and MUST NOT be preceded or followed by a blank line.</del>
 
-Closing braces MUST be on their own line and MUST NOT be preceded by a blank
-line.
+<del>Closing braces MUST be on their own line and MUST NOT be preceded by a blank line.</del>
 
 ~~~php
 <?php
@@ -267,12 +252,12 @@ use FooClass;
 use BarClass as Bar;
 use OtherVendor\OtherPackage\BazClass;
 
-class ClassName extends ParentClass implements \ArrayAccess, \Countable
-{
+class ClassName extends ParentClass implements \ArrayAccess, \Countable {
     // constants, properties, methods
 }
 ~~~
 
+**TODO** Nop.
 Lists of `implements` and, in the case of interfaces, `extends` MAY be split
 across multiple lines, where each subsequent line is indented once. When doing
 so, the first item in the list MUST be on the next line, and there MUST be only
@@ -298,6 +283,7 @@ class ClassName extends ParentClass implements
 
 ### 4.2 Using traits
 
+**TODΟ** yes and no... allow whitespace.
 The `use` keyword used inside the classes to implement traits MUST be
 declared on the next line after the opening brace.
 
@@ -308,12 +294,12 @@ namespace Vendor\Package;
 
 use Vendor\Package\FirstTrait;
 
-class ClassName
-{
+class ClassName {
     use FirstTrait;
 }
 ~~~
 
+**TODO** Ok in principle. Motivation is legibility, not automation.
 Each individual trait that is imported into a class MUST be included
 one-per-line and each inclusion MUST have its own `use` import statement.
 
@@ -326,8 +312,7 @@ use Vendor\Package\FirstTrait;
 use Vendor\Package\SecondTrait;
 use Vendor\Package\ThirdTrait;
 
-class ClassName
-{
+class ClassName {
     use FirstTrait;
     use SecondTrait;
     use ThirdTrait;
@@ -344,8 +329,7 @@ namespace Vendor\Package;
 
 use Vendor\Package\FirstTrait;
 
-class ClassName
-{
+class ClassName {
     use FirstTrait;
 }
 ~~~
@@ -359,8 +343,7 @@ namespace Vendor\Package;
 
 use Vendor\Package\FirstTrait;
 
-class ClassName
-{
+class ClassName {
     use FirstTrait;
 
     private $property;
@@ -373,35 +356,31 @@ note of indentation, spacing, and new lines.
 ~~~php
 <?php
 
-class Talker
-{
+class Talker {
     use A;
-    use B {
-        A::smallTalk insteadof B;
-    }
-    use C {
-        B::bigTalk insteadof C;
-        C::mediumTalk as FooBar;
-    }
+    use B { A::smallTalk insteadof B; }
+    use C { B::bigTalk   insteadof C; C::mediumTalk as FooBar; }
 }
 ~~~
 
 ### 4.3 Properties and Constants
 
-Visibility MUST be declared on all properties.
+- [x] Visibility MUST be declared on all properties.
 
-Visibility MUST be declared on all constants if your project PHP minimum
-version supports constant visibilities (PHP 7.1 or later).
+- [x] Visibility MUST be declared on all constants if your project PHP minimum version supports constant visibilities
+  (PHP 7.1 or later).
 
-The `var` keyword MUST NOT be used to declare a property.
+- [x] The `var` keyword MUST NOT be used to declare a property.
 
+**TODO** Legibility rule
 There MUST NOT be more than one property declared per statement.
 
+**TODO** Project convention rather than coding style
 Property names MUST NOT be prefixed with a single underscore to indicate
 protected or private visibility. That is, an underscore prefix explicitly has
 no meaning.
 
-There MUST be a space between type declaration and property name.
+- [x] There MUST be a space between type declaration and property name.
 
 A property declaration looks like the following:
 
@@ -410,8 +389,7 @@ A property declaration looks like the following:
 
 namespace Vendor\Package;
 
-class ClassName
-{
+class ClassName {
     public $foo = null;
     public static int $bar = 0;
 }
@@ -419,12 +397,16 @@ class ClassName
 
 ### 4.4 Methods and Functions
 
-Visibility MUST be declared on all methods.
+- [x] Visibility MUST be declared on all methods.
 
+**TODO** Project convention rather than coding style
+Property names MUST NOT be prefixed with a single underscore to indicate
 Method names MUST NOT be prefixed with a single underscore to indicate
 protected or private visibility. That is, an underscore prefix explicitly has
 no meaning.
 
+**TODO** Disagree
+Property names MUST NOT be prefixed with a single underscore to indicate
 Method and function names MUST NOT be declared with space after the method name. The
 opening brace MUST go on its own line, and the closing brace MUST go on the
 next line following the body. There MUST NOT be a space after the opening
@@ -438,34 +420,29 @@ parentheses, commas, spaces, and braces:
 
 namespace Vendor\Package;
 
-class ClassName
-{
-    public function fooBarBaz($arg1, &$arg2, $arg3 = [])
-    {
+class ClassName {
+    public function fooBarBaz ($arg1, &$arg2, $arg3 = []) {
         // method body
     }
 }
 ~~~
 
-A function declaration looks like the following. Note the placement of
-parentheses, commas, spaces, and braces:
+A function declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:
 
 ~~~php
 <?php
 
-function fooBarBaz($arg1, &$arg2, $arg3 = [])
-{
+function fooBarBaz ($arg1, &$arg2, $arg3 = []) {
     // function body
 }
 ~~~
 
 ### 4.5 Method and Function Arguments
 
-In the argument list, there MUST NOT be a space before each comma, and there
-MUST be one space after each comma.
+- [x] In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.
 
-Method and function arguments with default values MUST go at the end of the argument
-list.
+**TODO** This is a best practice, turn `MUST` into `SHOULD`
+Method and function arguments with default values MUST go at the end of the argument list.
 
 ~~~php
 <?php
@@ -481,10 +458,12 @@ class ClassName
 }
 ~~~
 
+**TODO** No.
 Argument lists MAY be split across multiple lines, where each subsequent line
 is indented once. When doing so, the first item in the list MUST be on the
 next line, and there MUST be only one argument per line.
 
+**TODO** No
 When the argument list is split across multiple lines, the closing parenthesis
 and opening brace MUST be placed together on their own line with one space
 between them.
@@ -494,15 +473,15 @@ between them.
 
 namespace Vendor\Package;
 
-class ClassName
-{
-    public function aVeryLongMethodName(
-        ClassTypeHint $arg1,
-        &$arg2,
-        array $arg3 = []
-    ) {
+class ClassName {
+
+    public function aVeryLongMethodName
+    (ClassTypeHint $arg1, &$arg2, array $arg3 = []) {
+
         // method body
+        //
     }
+
 }
 ~~~
 
@@ -1044,8 +1023,7 @@ $foo->bar(
 
 ## 8. Anonymous Classes
 
-Anonymous Classes MUST follow the same guidelines and principles as closures
-in the above section.
+Anonymous Classes MUST follow the same guidelines and principles as closures in the above section.
 
 ~~~php
 <?php
