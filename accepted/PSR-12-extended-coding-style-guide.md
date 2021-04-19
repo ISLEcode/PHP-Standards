@@ -51,10 +51,11 @@ use function Vendor\Package\{functionA, functionB, functionC};
 use const Vendor\Package\{ConstantA, ConstantB, ConstantC};
 
 class Foo extends Bar implements FooInterface {
+
     public function sampleFunction (int $a, int $b = null): array {
-        if ($a === $b) bar ();
-        elseif ($a > $b) $foo->bar ($arg1);
-        else BazClass::bar ($arg2, $arg3);
+            if ($a === $b) bar ();
+        elseif ($a > $b)   $foo->bar ($arg1);
+        else               BazClass::bar ($arg2, $arg3);
     }
 
     final public static function bar () {
