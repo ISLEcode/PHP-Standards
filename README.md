@@ -24,7 +24,7 @@ effort basis.
 
 | ID  | Title                                          | FIG status   | ISLE status   |
 | :-: | --------------------------------------         | ------------ | -----------   |
-| 0   | <del>[Autoloading Standard][psr0]</del>        | Deprecated   | n/a           |
+| 0   | <del>[Autoloading Standard][psr0]</del>        | Deprecated   | Cf. [PSR4]    |
 | 1   | [Basic Coding Standard][psr1]                  | Accepted     | Proof reading |
 | 2   | <del>[Coding Style Guide][psr2]</del>          | Deprecated   | n/a           |
 | 3   | [Logger Interface][psr3]                       | Accepted     | Proof reading |
