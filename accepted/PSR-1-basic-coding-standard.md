@@ -14,34 +14,34 @@ interpreted as described in [RFC 2119].
 
 ## 1. Overview
 
-- [ ] Files MUST use only `<?php` and `<?=` tags.
+- [x] Files MUST use only `<?php` and `<?=` tags.
 
-- [ ] Files MUST use only UTF-8 without BOM for PHP code.
+- [x] Files MUST use only UTF-8 without BOM for PHP code.
 
-- [ ] Files SHOULD *either* declare symbols (classes, functions, constants, etc.) *or* cause side-effects (e.g. generate output,
+- [x] Files SHOULD *either* declare symbols (classes, functions, constants, etc.) *or* cause side-effects (e.g. generate output,
   change .ini settings, etc.) but SHOULD NOT do both.
 
-- [ ] Namespaces and classes MUST follow recommendations in [PSR4].
+- [x] Namespaces and classes MUST follow recommendations in [PSR4].
 
-- [ ] Class names MUST be declared in `StudlyCaps`.
+- [x] Class names MUST be declared in `StudlyCaps`.
 
-- [ ] Class constants MUST be declared in all upper case with underscore separators.
+- [x] Class constants MUST be declared in all upper case with underscore separators.
 
-- [ ] Method names MUST be declared either in `snake_case` or in `camelCase`.
+- [x] Method names MUST be declared either in `snake_case` or in `camelCase`.
 
 ## 2. Files
 
 ### 2.1. PHP Tags
 
-- [ ] PHP code MUST use the long `<?php ?>` tags or the short-echo `<?= ?>` tags; it MUST NOT use the other tag variations.
+- [x] PHP code MUST use the long `<?php ?>` tags or the short-echo `<?= ?>` tags; it MUST NOT use the other tag variations.
 
 ### 2.2. Character Encoding
 
-- [ ] PHP code MUST use only UTF-8 without BOM.
+- [x] PHP code MUST use only UTF-8 without BOM.
 
 ### 2.3. Side Effects
 
-- [ ] A file SHOULD declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it SHOULD
+- [x] A file SHOULD declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it SHOULD
   execute logic with side effects, but SHOULD NOT do both.
 
 *Note*: The term "side effects" means execution of logic not directly related to declaring classes, functions, constants, etc.,
@@ -89,13 +89,13 @@ if (! function_exists('bar')) function bar () {
 
 ## 3. Namespace and Class Names
 
-- [ ] Namespaces and classes MUST follow "autoloading" PSR4.
+- [x] Namespaces and classes MUST follow "autoloading" PSR4.
 
     This means each class is in a file by itself, and is in a namespace of at least one level: a top-level vendor name.
 
-- [ ] Class names MUST be declared in `StudlyCaps`.
+- [x] Class names MUST be declared in `StudlyCaps`.
 
-- [ ] Code MUST use formal namespaces.
+- [x] Code MUST use formal namespaces.
 
 For example:
 
@@ -112,7 +112,7 @@ The term "class" refers to all classes, interfaces, and traits.
 
 ### 4.1. Constants
 
-- [ ] Class constants MUST be declared in all upper case with underscore separators.
+- [x] Class constants MUST be declared in all upper case with underscore separators.
 For example:
 
 ``` {.php}
@@ -135,5 +135,5 @@ or method-level.
 
 ### 4.3. Methods
 
-- [ ] Method names MUST be declared either in `snake_case()` or in `camelCase()`.
+- [x] Method names MUST be declared either in `snake_case()` or in `camelCase()`.
 
