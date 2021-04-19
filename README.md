@@ -1,66 +1,18 @@
-PHP Framework Interoperability Group
-====================================
+## PHP Quality assurance and coding style
 
-The idea behind the group is for project representatives to talk about the
-commonalities between our projects and find ways we can work together. Our main
-audience is each other, but we’re very aware that the rest of the PHP community
-is watching. If other folks want to adopt what we’re doing they are welcome to
-do so, but that is not the aim.
+Rather then reinventing the wheel we have taken the commonly discussed and adopted _PHP standard recommendations_ (PSR)
+maintained by the [PHP Framework Interoperability Group][php-fig] (PHP-FIG) and customised them for our purposes and toolchains.
 
-Proposing a Standard Recommendation
-------------------------------------
+As clearly stated by the PHP-FIG, their standardisation efforts our for collaboration a closed set of PHP projects:
 
-To propose a PHP Standard Recommendation (PSR):
+> Our main audience is each other, but we’re very aware that the rest of the PHP community is watching. If other folks want to
+> adopt what we’re doing they are welcome to do so, but that is not the aim.
 
-- fork this repo, create a branch, checkout that branch, add the PSR in
-  `proposed/`, push the branch to Github, and send a pull request; or,
+While we adhere to the majority of the commonalities they have standardised, some are considered -- for our purposes, non
+practical or in violation of our quality assurance and code base as established, and evolved, over almost four decades and using
+many different programming languages. Hence the purpose of this repository to amend their works accordingly.
 
-- create a ticket to start a discussion on Github; or,
+This is made available primarily for our staff and partners. However we know that some of our decisions are _non conventional_
+in our industry today. Discussions on such topics is open. We are open to positive criticism, and under valid arguments, could
+adjust over time. Note however that animating discussions will be on a best effort basis.
 
-- start a conversation on the [mailing list][].
-
-[mailing list]: http://groups.google.com/group/php-fig/
-
-GitHub usage
-------------
-
-All discussion regarding a PSR happens on the [mailing list][]. Issues filed
-in GitHub are rarely monitored, and PRs are likely to be missed unless a message
-is sent to the mailing list regarding them.  Reviews of a proposed PSR should be
-conducted on the mailing list, not through PR comments for the same reason.
-
-Please do not simply file an issue or PR and walk-away.  The most likely outcome
-is that it will never get seen or addressed.
-
-Requesting Membership
----------------------
-
-You **do not** need to be a voting member to participate in discussion on
-the [mailing list][].
-
-To become a voting member, you must send an email to the [mailing list][].
-
-- The subject line should read: `Membership Request: {$your_name} ({$project_name})`
-
-- The body should include your name, the name of (and link to) the project you
-  represent, and other details you feel are relevant.
-
-- Current members will vote on your request.
-
-Do not combine separate membership requests in a single thread; one request
-per thread, please.
-
-Language & Translations
------------------------
-
-All PSRs are written in British English or American English (Different specifications
-may vary, but it is consistent within the same specification). The PHP FIG does not
-offer official translations into other languages but other external entities are free
-to translate the specifications in accordance with the license.
-
-Voting Members
---------------
-
-The current list of voting members is available on the [project website][].
-
-[project website]: https://www.php-fig.org/
